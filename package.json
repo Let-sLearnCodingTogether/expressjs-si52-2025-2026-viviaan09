@@ -19,7 +19,9 @@
   "homepage": "https://github.com/Let-sLearnCodingTogether/expressjs-si52-2025-2026-viviaan09#readme",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^5.1.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.10"
   }
 }
