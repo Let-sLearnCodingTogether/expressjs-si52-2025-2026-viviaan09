@@ -6,6 +6,17 @@ export const protect = (req,res,next) => {
         {
         session: false
         }, 
-        (err, user, info) => {}
-    );
+        (err, user, info) => {
+            if (err || !user) {
+                return res.status(401).json({
+                    message: info? info.message : "Unauthorized",
+                    err: err || "Tidak valid",
+                });
+            }
+
+            req.user = user;
+
+            return next(); // untuk mengizinkan user tersebut untuk lewat
+        }
+    )(req,res,next);
 }
