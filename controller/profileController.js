@@ -9,6 +9,10 @@ export const publicProfile =(req,res) => {
 
 export const privateProfile =async(req,res) => {
     try{
+        res.status(200).json({
+            message: "Private profile berhasil di akses",
+            data: null
+        });
 
     }catch (error){
         res.status(500).json({
@@ -16,5 +20,5 @@ export const privateProfile =async(req,res) => {
             data: null
         });
     }
-    
+
 };
